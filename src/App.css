@@ -89,7 +89,7 @@ button {
   box-shadow: 3px 3px 3px 1px black;
   margin-top: 1vh;
 }
-
+/*Debug*/
 button:hover {
   cursor: pointer;
 }
