@@ -17,6 +17,18 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Headings */
+h1 {
+  background-color: cyan;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  padding: 1vh 0;
+  margin-bottom: 2vh;
+}
+
 h2 {
   text-transform: uppercase;
   background-color: white;
@@ -24,49 +36,91 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
+  font-size: 2.5vw;
+  padding: 1vh 0;
 }
+
+h3 {
+  color: white;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+/* Content Layout */
 .content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 5vw;
+  padding: 2vh 5vw;
 }
-#fComp {
-  background-color: rgba(165, 42, 42, 0.711);
+
+/* Component Containers */
+#fComp,
+#cComp {
+  background-color: rgba(165, 42, 42, 0.711); /* default for #fComp */
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2vh 2vw;
+  border-radius: 10px;
+  min-width: 250px;
+  max-width: 90vw;
+  flex: 1 1 300px;
 }
 
 #cComp {
   background-color: palevioletred;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
+
+/* Button Styling */
 button {
-  height: 3vw;
-  width: 3vw;
+  height: 10vw;
+  width: 10vw;
+  max-height: 60px;
+  max-width: 60px;
+  min-height: 40px;
+  min-width: 40px;
   background-color: transparent;
-  font-size: 2vw;
+  font-size: 3vw;
   color: white;
   border: 1px solid black;
   box-shadow: 3px 3px 3px 1px black;
+  margin-top: 1vh;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-h3 {
-  color: white;
-  font-size: 3vw;
-}
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
+  }
 
-h1 {
-  background-color: cyan;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1vmax;
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  button {
+    width: 15vw;
+    height: 15vw;
+    font-size: 5vw;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  #fComp,
+  #cComp {
+    width: 90%;
+  }
 }
